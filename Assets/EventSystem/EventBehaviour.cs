@@ -8,7 +8,7 @@ public abstract class EventBehaviour : MonoBehaviour {
 	public string onActionString = "actionTest";
 	private UnityAction action;
 
-	protected void InitEvent()
+	protected void Init()
 	{
 		action = new UnityAction (OnAction);
 	}
