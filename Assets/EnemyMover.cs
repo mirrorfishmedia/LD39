@@ -21,7 +21,13 @@ public class EnemyMover : EventBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		agent.destination = chaseTarget.position;	
+		if (chaseTarget != null) 
+		{
+			agent.destination = chaseTarget.position;
+			agent.isStopped = false;
+			Debug.Log ("agent.destination: " + agent.destination);
+		}
+
 	}
 
 	public override void OnAction ()

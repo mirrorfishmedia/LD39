@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour {
 	public float attackFrequency = .1f;
 	public float attackRange = .5f;
 	public int attackDmg = -1;
+	public LayerMask playerStuff;
 
 	void OnDisable()
 	{
@@ -22,13 +23,19 @@ public class EnemyAttack : MonoBehaviour {
 	void Attack()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast (attackPoint.position, transform.forward, out hit, attackRange)) 
+		Debug.DrawRay (attackPoint.position, attackPoint.forward * attackRange, Color.red);
+		if (Physics.Raycast (attackPoint.position, attackPoint.forward, out hit, attackRange, playerStuff)) 
 		{
 			DamageableObject dmgObj = hit.collider.GetComponent<DamageableObject> ();
+			Debug.Log ("attacking");
 			if (dmgObj != null) 
 			{
-				if (!dmgObj.isEnemy) 
+				Debug.Log ("dmgObj != null " + dmgObj.gameObject);
+
+				Debug.Log ("dmgObj.isEnemy: " + dmgObj.isEnemy);
+				if (dmgObj.isEnemy == false) 
 				{
+					Debug.Log ("!dmgObj.isEnemy");
 					dmgObj.ChangeHealth (attackDmg);
 				}
 

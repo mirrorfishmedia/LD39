@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BuildGround : MonoBehaviour {
+public class BuildGround : EventBehaviour {
 
 	public GameObject[] gridPrefabs;
 	private NavMeshSurface surface;
@@ -14,13 +14,25 @@ public class BuildGround : MonoBehaviour {
 
 	void Awake()
 	{
+		base.Init ();
 		surface = GetComponent<NavMeshSurface> ();
+	}
+
+	public override void OnAction ()
+	{
+		UpdateNav ();
+	}
+
+	void UpdateNav()
+	{
+		surface.BuildNavMesh ();
+		Debug.Log ("baking");
 	}
 
 	void Start () 
 	{
 		BuildGrid ();	
-		surface.BuildNavMesh ();
+
 	}
 
 	void BuildGrid()

@@ -6,14 +6,25 @@ public class Damager : MonoBehaviour {
 
 	public int damageAmount = -1;
 	public GameObject collisionEffect;
-	public bool isEnemyDamage;
+	public bool playerOwned = true;
 
 	void OnCollisionEnter(Collision col)
 	{
 		DamageableObject dmgObj = col.collider.GetComponent<DamageableObject> ();
 		if (dmgObj != null) 
 		{
-			dmgObj.ChangeHealth (damageAmount);
+			if (dmgObj.isEnemy) {
+				dmgObj.ChangeHealth (damageAmount);
+			} else 
+			{
+				PoweredObject poweredObj = dmgObj.gameObject.GetComponent<PoweredObject> ();
+				if (poweredObj != null) 
+				{
+					poweredObj.ChangePower (+1);
+				}
+
+			}
+
 
 
 		}
