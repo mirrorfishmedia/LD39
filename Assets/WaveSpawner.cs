@@ -26,6 +26,7 @@ public class WaveSpawner : MonoBehaviour {
 		{
 			if (currentEnemyCount <= maxEnemiesInWave) {
 				GameObject clonedEnemy = Instantiate (objectsToSpawn [0], spawnPoints [Random.Range (0, spawnPoints.Length)].position, Quaternion.identity) as GameObject;
+				clonedEnemy.name = "enemy " + currentEnemyCount.ToString();
 				EnemyMover mover = clonedEnemy.GetComponent<EnemyMover> ();
 				mover.chaseTarget = startTarget;
 				currentEnemyCount++;

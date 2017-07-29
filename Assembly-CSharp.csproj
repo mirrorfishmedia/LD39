@@ -112,6 +112,10 @@
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
      <Compile Include="Assets\PlayerAttack.cs" />
+     <Compile Include="Assets\PlayerPower.cs" />
+     <Compile Include="Assets\PowerDisplay.cs" />
+     <Compile Include="Assets\PoweredObject.cs" />
+     <Compile Include="Assets\TurretShoot.cs" />
      <Compile Include="Assets\WaveSpawner.cs" />
      <None Include="Assets\Cinemachine\license.txt" />
      <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />

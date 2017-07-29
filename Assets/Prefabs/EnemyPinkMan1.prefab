@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4090020119961944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114216923223026620}
   - component: {fileID: 114779375216213076}
   - component: {fileID: 114312691145594124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPinkMan1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4634495662404480}
   - component: {fileID: 198538880513588424}
   - component: {fileID: 199658631698585722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4023520594224024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeathObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4704269648258210}
   - component: {fileID: 33363296203728144}
   - component: {fileID: 23745625478701692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ Transform:
   m_Children:
   - {fileID: 4634495662404480}
   m_Father: {fileID: 4556246539575566}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4090020119961944
 Transform:
@@ -121,7 +121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4556246539575566}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4556246539575566
 Transform:
@@ -134,8 +134,8 @@ Transform:
   m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
   m_Children:
   - {fileID: 4704269648258210}
-  - {fileID: 4023520594224024}
   - {fileID: 4090020119961944}
+  - {fileID: 4023520594224024}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 1
   deathEffect: {fileID: 1459560485488858}
+  isEnemy: 1
 --- !u!136 &136754527816997700
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -272,7 +273,7 @@ CapsuleCollider:
   m_Radius: 10
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 11.07, z: 0}
+  m_Center: {x: 0, y: 9.96, z: 0}
 --- !u!195 &195228969997863154
 NavMeshAgent:
   m_ObjectHideFlags: 1

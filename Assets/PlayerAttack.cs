@@ -8,10 +8,7 @@ public class PlayerAttack : MonoBehaviour {
 	public GameObject projectile;
 	public float shootForce = 250f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public PoweredObject playerPower;
 	
 	// Update is called once per frame
 	void Update () 
@@ -24,9 +21,15 @@ public class PlayerAttack : MonoBehaviour {
 
 	void Fire()
 	{
-		GameObject clone = Instantiate (projectile, spawnPoint.position, transform.rotation) as GameObject;
-		Rigidbody cloneRb = clone.GetComponent<Rigidbody> ();
-		cloneRb.AddForce (transform.forward * shootForce);
+		if (playerPower.currentPower > 0) {
+		
+			playerPower.ChangePower (-1);
+			GameObject clone = Instantiate (projectile, spawnPoint.position, transform.rotation) as GameObject;
+			Rigidbody cloneRb = clone.GetComponent<Rigidbody> ();
+			cloneRb.AddForce (transform.forward * shootForce);
+
+		}
+
 	}
 
 }
