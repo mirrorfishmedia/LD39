@@ -24,6 +24,7 @@ public class PlaySoundTriggered : MonoBehaviour {
 
 	public void TriggerSound()
 	{
+		source = GetComponent<AudioSource> ();	
 		AudioClip clipSelected = clips [Random.Range (0, clips.Length)];
  
 		source.pitch = Random.Range (minPitch, maxPitch);

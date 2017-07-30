@@ -162,12 +162,14 @@
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\Scripts\AcquireTarget.cs" />
      <Compile Include="Assets\Scripts\BuildGround.cs" />
+     <Compile Include="Assets\Scripts\CombineChildren.cs" />
      <Compile Include="Assets\Scripts\DamageableObject.cs" />
      <Compile Include="Assets\Scripts\Damager.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyMover.cs" />
      <Compile Include="Assets\Scripts\GateSequence.cs" />
      <Compile Include="Assets\Scripts\MainCharMover.cs" />
+     <Compile Include="Assets\Scripts\MeshCombineUtility.cs" />
      <Compile Include="Assets\Scripts\PlaceObject.cs" />
      <Compile Include="Assets\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerPower.cs" />
@@ -177,6 +179,7 @@
      <Compile Include="Assets\Scripts\TurretShoot.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Skull.cs" />
+     <Compile Include="Assets\StaticCombiner.cs" />
      <Compile Include="Assets\StructureDispenser.cs" />
      <Compile Include="Assets\Teleport.cs" />
      <Compile Include="Assets\Timer.cs" />
