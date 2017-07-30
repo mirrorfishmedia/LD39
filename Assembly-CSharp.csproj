@@ -128,6 +128,7 @@
      <Compile Include="Assets\Skull.cs" />
      <Compile Include="Assets\StructureDispenser.cs" />
      <Compile Include="Assets\Teleport.cs" />
+     <Compile Include="Assets\UnitSpawner.cs" />
      <Compile Include="Assets\UnloadSkulls.cs" />
      <None Include="Assets\Cinemachine\license.txt" />
      <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />

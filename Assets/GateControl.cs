@@ -5,22 +5,17 @@ using UnityEngine;
 public class GateControl : MonoBehaviour {
 
 	public GameObject litSurface;
-	public bool spawning;
+	public GameObject spawner;
 
 	// Use this for initialization
 	void Start () 
 	{
-		litSurface.SetActive (false);	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
-	public void StartSpawning()
+
+	public void ActivateGate()
 	{
-		spawning = true;
+		spawner.SetActive (true);
 		litSurface.SetActive (true);
 	}
 }
