@@ -8,6 +8,7 @@ public class PlayerSkulls : MonoBehaviour {
 	public int currentSkulls;
 	public int maxSkulls = 100;
 	public Text skullAmount;
+	public PlaySoundTriggered playTriggered;
 
 	public PoweredObject powered;
 
@@ -21,6 +22,7 @@ public class PlayerSkulls : MonoBehaviour {
 				//CountSkulls (skull.skullValue);
 
 				powered.ChangePower (+1);
+				playTriggered.TriggerSound ();
 			}
 
 			col.gameObject.SetActive (false);

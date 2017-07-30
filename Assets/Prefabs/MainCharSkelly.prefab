@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 195846648707211468}
   - component: {fileID: 114902528381209344}
   - component: {fileID: 114687747685912976}
+  - component: {fileID: 114487646120233812}
   m_Layer: 10
   m_Name: MainCharSkelly
   m_TagString: Untagged
@@ -1311,7 +1312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 1
   deathEffect: {fileID: 1961919907638912}
+  skull: {fileID: 0}
   isEnemy: 1
+  isStructure: 0
 --- !u!114 &114356979634745536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1349,7 +1352,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPower: 10
   maxPower: 10
+  skullValueMultiplier: 1
   display: {fileID: 114356979634745536}
+--- !u!114 &114487646120233812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1561464766354260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b408eac92400fe545a81356a1c203e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterials: []
+  flashMaterial: {fileID: 2100000, guid: 90b1a947620b9e7428414e36a8d27380, type: 2}
+  flashDuration: 0.1
 --- !u!114 &114687747685912976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1362,9 +1380,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4622687884327752}
-  projectile: {fileID: 1159530713749828, guid: 1be8108c59b73f7429ef52058129e24d, type: 2}
+  weaponProjectile: {fileID: 0}
+  skullProjectile: {fileID: 0}
   shootForce: 560
   playerPower: {fileID: 114444352081809808}
+  placeObject: {fileID: 0}
 --- !u!114 &114855634101292944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1392,7 +1412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpMax: 1
   deathEffect: {fileID: 1961919907638912}
+  skull: {fileID: 0}
   isEnemy: 0
+  isStructure: 0
 --- !u!114 &114974564673625578
 MonoBehaviour:
   m_ObjectHideFlags: 1

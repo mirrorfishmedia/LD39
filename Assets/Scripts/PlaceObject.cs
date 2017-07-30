@@ -14,6 +14,7 @@ public class PlaceObject : MonoBehaviour {
 	public Structure currentStructure;
 	public bool hasStructureToPlace = false;
 	public StructureDispenser structureDispenser;
+	public PlaySoundTriggered playTriggered;
 
 	public enum PlacementStructure { turret, teleporter,  cauldronBattery, teleporterExit, blockerBox};
 
@@ -83,10 +84,8 @@ public class PlaceObject : MonoBehaviour {
 
 			highlightQuad.SetActive (false);
 		}		
-
-		
-
 	}
+
 
 	void HighlightGround()
 	{
@@ -101,16 +100,23 @@ public class PlaceObject : MonoBehaviour {
 
 	}
 
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere (targetSpawnPos + offset, .25f);
+	}
+
+
 	void PlaceAtHighlight()
 	{
 		
-		int objectsFound = Physics.OverlapSphereNonAlloc (targetSpawnPos + offset, .5f, collidersInTargetLoc, layerToCheckForObjects);
+		int objectsFound = Physics.OverlapSphereNonAlloc (targetSpawnPos + offset, .25f, collidersInTargetLoc, layerToCheckForObjects);
 		if (objectsFound == 0) 
 		{
 			GameObject clone = Instantiate (objectToPlace, targetSpawnPos, Quaternion.identity) as GameObject;
 			EventManager.TriggerEvent ("bake");
 			structureDispenser.readyToDispense = true;
-
+			playTriggered.TriggerSound ();
 			if (lastPlacedStructure == PlacementStructure.teleporter) {
 				Teleport teleporterEntrance = clone.GetComponent<Teleport> ();
 				lastTeleportEntrance = teleporterEntrance;

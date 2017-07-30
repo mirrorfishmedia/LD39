@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114779375216213076}
   - component: {fileID: 114312691145594124}
   - component: {fileID: 114274847844120424}
+  - component: {fileID: 114331232198136130}
   m_Layer: 8
   m_Name: EnemyPinkMan1
   m_TagString: Untagged
@@ -90,6 +91,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4023520594224024}
+  - component: {fileID: 82654013722680074}
+  - component: {fileID: 114814996731535026}
   m_Layer: 8
   m_Name: DeathObject
   m_TagString: Untagged
@@ -349,6 +352,87 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!82 &82654013722680074
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459560485488858}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 5
+  MaxDistance: 100
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114216923223026620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,6 +486,20 @@ MonoBehaviour:
   playerStuff:
     serializedVersion: 2
     m_Bits: 3072
+--- !u!114 &114331232198136130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324399242653134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b408eac92400fe545a81356a1c203e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterials: []
+  flashMaterial: {fileID: 2100000, guid: 90b1a947620b9e7428414e36a8d27380, type: 2}
+  flashDuration: 0.1
 --- !u!114 &114435478008048418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,11 +525,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5503f92809d6384589f37b123386016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpMax: 1
+  hpMax: 3
   deathEffect: {fileID: 1459560485488858}
   skull: {fileID: 114435478008048418}
   isEnemy: 1
   isStructure: 0
+--- !u!114 &114814996731535026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459560485488858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdcc8833c8617347ac7eac67a8fdec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPitch: 0.5
+  maxPitch: 1
+  clips:
+  - {fileID: 8300000, guid: 139463f7839b99d49a4b3f7fbffd631d, type: 3}
+  - {fileID: 8300000, guid: 139463f7839b99d49a4b3f7fbffd631d, type: 3}
+  - {fileID: 8300000, guid: d020aa0994a9d1f4da82202e808a3078, type: 3}
+  - {fileID: 8300000, guid: 62a1792bb8e6da94199ac8c79ea10eae, type: 3}
+  - {fileID: 8300000, guid: f0af2797d8b215f4d8373fdfe468f60b, type: 3}
 --- !u!136 &136754527816997700
 CapsuleCollider:
   m_ObjectHideFlags: 1

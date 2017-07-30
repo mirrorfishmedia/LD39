@@ -9,10 +9,16 @@ public class DamageableObject : MonoBehaviour {
 	public Skull skull;
 	public bool isEnemy = true;
 	public bool isStructure;
+	private FlashOnDamage flasher;
 
 	private int currentHp;
 
 	// Use this for initialization
+	void Awake()
+	{
+		flasher = GetComponent<FlashOnDamage> ();
+
+	}
 	void Start () 
 	{
 		currentHp = hpMax;	
@@ -21,6 +27,11 @@ public class DamageableObject : MonoBehaviour {
 	public void ChangeHealth(int healthChange)
 	{
 		currentHp += healthChange;
+		if (flasher != null) 
+		{
+			flasher.DamageFlash ();
+		}
+
 
 		CheckDeath ();
 

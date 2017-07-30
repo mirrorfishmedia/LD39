@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 114917817023639148}
   - component: {fileID: 114092769005979408}
   - component: {fileID: 114744547726303994}
+  - component: {fileID: 114517783019212844}
   m_Layer: 11
   m_Name: cauldronBattery
   m_TagString: Untagged
@@ -676,6 +677,20 @@ MonoBehaviour:
     type: 2}
   spawnPoint: {fileID: 4577632763393916}
   powered: {fileID: 114744547726303994}
+--- !u!114 &114517783019212844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669670229919660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b408eac92400fe545a81356a1c203e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterials: []
+  flashMaterial: {fileID: 2100000, guid: 90b1a947620b9e7428414e36a8d27380, type: 2}
+  flashDuration: 0.1
 --- !u!114 &114533628468202230
 MonoBehaviour:
   m_ObjectHideFlags: 1

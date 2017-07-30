@@ -13,6 +13,7 @@ public class TurretShoot : MonoBehaviour {
 	public LayerMask layerToCheckSphere;
 	public LayerMask layerToCheckRay;
 	public Transform top;
+	public PlaySoundTriggered playTriggered;
 
 	private PoweredObject power;
 	private float nextFire;
@@ -97,6 +98,7 @@ public class TurretShoot : MonoBehaviour {
 		{
 			if (Time.time > nextFire + fireRate) 
 			{
+				playTriggered.TriggerSound ();
 				power.ChangePower (-1);
 				nextFire = Time.time + fireRate;
 				GameObject clone = Instantiate (projectile, attackPoint.position, transform.rotation) as GameObject;

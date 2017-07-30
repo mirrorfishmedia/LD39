@@ -1,12 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainCharMover.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameMan.cs">
     <Files>
-      <File FileName="Assets\TestTwo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Jump.cs" Line="1" Column="1" />
-      <File FileName="Assets\BuildGround.cs" Line="1" Column="1" />
-      <File FileName="Assets\MainCharMover.cs" Line="26" Column="40" />
-      <File FileName="..\..\..\..\Documents\Unity_Work\Streaming\NavMeshTraining\Projects\MikeDemo\NewNavMesh_Project\Assets\Scripts\Player_ClickToMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\EventSystem\EventBehaviour.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\PlaceObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\StructureDispenser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Structure.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\GateControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WaveSpawner.cs" Line="22" Column="3" />
+      <File FileName="Assets\UnitSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Teleport.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainCharMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DamageableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\FlashOnDamage.cs" Line="1" Column="1" />
+      <File FileName="Assets\Skull.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameMan.cs" Line="39" Column="1" />
+      <File FileName="Assets\Game Jam Template\Scripts\StartOptions.cs" Line="65" Column="26" />
+      <File FileName="Assets\EventSystem\EventManager.cs" Line="72" Column="1" />
+      <File FileName="Assets\PlayerDeath.cs" Line="9" Column="33" />
+      <File FileName="Assets\Timer.cs" Line="14" Column="1" />
+      <File FileName="Assets\PlaySoundOnEnable.cs" Line="23" Column="3" />
+      <File FileName="Assets\PlaySoundTriggered.cs" Line="27" Column="39" />
+      <File FileName="Assets\Scripts\PlayerAttack.cs" Line="39" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

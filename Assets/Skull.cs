@@ -10,12 +10,18 @@ public class Skull : MonoBehaviour {
 	public GameObject collectedParticle;
 
 
+	private Material skullMaterial;
+	private Renderer myRenderer;
+
 	public bool collected;
 
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody> ();
 		skullCollider = GetComponent<Collider> ();
+		myRenderer = GetComponentInChildren<Renderer> ();
+
+		skullMaterial = myRenderer.material;
 	}
 
 	public void OnDeath()
@@ -23,6 +29,7 @@ public class Skull : MonoBehaviour {
 		transform.SetParent (null);
 		rb.isKinematic = false;
 		skullCollider.enabled = true;
+		myRenderer.material = skullMaterial;
 	}
 
 	public void CollectForPower()
