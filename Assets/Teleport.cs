@@ -8,6 +8,10 @@ public class Teleport : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		other.transform.position = gateExit.position;
+		if (gateExit != null) 
+		{
+			other.transform.position = gateExit.position;
+		}
+
 	}
 }

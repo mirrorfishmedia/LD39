@@ -1380,9 +1380,9 @@ MonoBehaviour:
   attackPoint: {fileID: 4927320396755398}
   projectile: {fileID: 1159530713749828, guid: 1be8108c59b73f7429ef52058129e24d, type: 2}
   shootForce: 800
-  detectionRadius: 25
-  fireRate: 0.5
-  detectionRate: 0.1
+  detectionRadius: 12
+  fireRate: 1
+  detectionRate: 0.5
   layerToCheckSphere:
     serializedVersion: 2
     m_Bits: 256
